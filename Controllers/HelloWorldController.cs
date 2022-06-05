@@ -8,13 +8,12 @@ namespace mymvcapp.Controllers
     public class HelloWorldController : Controller
     {
 
+        private static List<DogViewModel> dogs = new List<DogViewModel>();
         //    Creating New Links
         public IActionResult Index()
         {
-            // Models used
-            DogViewModel dogo = new DogViewModel() { Name = "Bobby Lasi", Age = 23 };
             // View used
-            return View(dogo);
+            return View(dogs);
         }
 
         public IActionResult Create()
@@ -27,7 +26,8 @@ namespace mymvcapp.Controllers
         public IActionResult CreateDog(DogViewModel dogViewModel)
         {
             // return View("Index");
-            return RedirectToAction("Index", "HelloWorld");
+            dogs.Add(dogViewModel);
+            return RedirectToAction("Index", "HelloWorld", new { dogViewModel });
         }
 
         public string Products()
