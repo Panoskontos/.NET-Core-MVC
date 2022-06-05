@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Panagiotis\Documents\Documents\C#2\mymvcapp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Panagiotis/Documents/Documents/C\#2/mymvcapp/Views/HelloWorld/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Panagiotis/Documents/Documents/C\#2/mymvcapp/Views/HelloWorld/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

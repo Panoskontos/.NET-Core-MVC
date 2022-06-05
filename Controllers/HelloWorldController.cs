@@ -1,30 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
 using mymvcapp.Models;
-namespace mymvcapp.Controllers;
 
-public class HelloWorldController : Controller
+
+namespace mymvcapp.Controllers
 {
 
-    //    Creating New Links
-    public IActionResult Index()
+    public class HelloWorldController : Controller
     {
-        // Models used
-        DogViewModel dogo = new DogViewModel() { Name="Bobby Lasi", Age=23 };
-        // View used
-        return View(dogo);
+
+        //    Creating New Links
+        public IActionResult Index()
+        {
+            // Models used
+            DogViewModel dogo = new DogViewModel() { Name = "Bobby Lasi", Age = 23 };
+            // View used
+            return View(dogo);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        public string Products()
+        {
+            return "Products Page";
+        }
+
+
+
+
     }
-
-    public string Hello()
-    {
-        return "Who is there";
-    }
-
-    public string Products()
-    {
-        return "Products Page";
-    }
-
-
-
-
-}
+};
