@@ -19,7 +19,15 @@ namespace mymvcapp.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            // clean view model that we will pass in create dog class
+            var dogVm = new DogViewModel();
+            return View(dogVm);
+        }
+
+        public IActionResult CreateDog(DogViewModel dogViewModel)
+        {
+            // return View("Index");
+            return RedirectToAction("Index", "HelloWorld");
         }
 
         public string Products()

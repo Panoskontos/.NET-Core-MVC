@@ -1,26 +1,25 @@
+@model DogViewModel
 
-
-<h1>Create</h1>
+<h1>Create Dog</h1>
 
 
 <div class="row">
     <div class="col-6">
-        <form>
+        @* send data to correct endpoint *@
+        <form asp-controller="HelloWorld" asp-action="CreateDog" method="post">
 
-            <div>
-                <label for="form-label">
-                    Dog Name
-                </label>
-                <input type="text" name="" id="">
+            <div class="form-group">
+                <label >Dog Name</label>
+                <input asp-for=Name type="text" class="form-control">
             </div>
+            <br>
+            <div class="form-group">
+                <label>Dog Age</label>
+                <input asp-for=Age type="number" class="form-control">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
 
-            <div>
-                <label for="form-label">
-                    Dog Age
-                </label>
-                <input type="number" name="" id="">
-            </div>
-            
         </form>
     </div>
 </div>
